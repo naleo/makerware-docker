@@ -10,7 +10,7 @@ $ docker build -t docker-makerbot-desktop ./docker-makerbot-desktop
 
 ### From DockerHub
 ```bash
-$ docker pull hiroakimikami/docker-makerbot-desktop
+$ docker pull hiroaki8270/docker-makerbot-desktop
 ```
 
 ## Usage
