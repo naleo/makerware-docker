@@ -4,13 +4,9 @@ A docker image that runs [Makerbot Desktop](https://www.makerbot.com/desktop).
 ## Install
 ### From the Git repository
 ```bash
-$ git clone https://github.com/HiroakiMikami/docker-makerbot-desktop
-$ docker build -t docker-makerbot-desktop ./docker-makerbot-desktop
-```
-
-### From DockerHub
-```bash
-$ docker pull mhiroaki8270/docker-makerbot-desktop
+$ git clone https://github.com/monkeynaleo/makerware-docker
+$ cd makerware-docker
+$ docker build -t makerware-docker .
 ```
 
 ## Usage
@@ -22,11 +18,11 @@ The following command will:
 4. run `makerware` and its backend service.
 
 ```bash
-$ docker run -ti -e DISPLAY=$DISPLAY \
+$ docker run -ti -e DISPLAY \
                  -v /tmp/.X11-unix:/tmp/.X11-unix \
                  -v /dev/:/dev/ \
-                 -v ${HOME}/makerbot:/home/makerbot
-                 docker-makerbot-desktop
+                 -v ${HOME}/makerbot:/home/makerbot \
+                 --net=host makerware-docker
 ```
 
 ## Troubleshooting
